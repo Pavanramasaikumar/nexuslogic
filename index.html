@@ -10,10 +10,15 @@
     <div id="home" class="main">
         <div class="header">
             <h1>✇ POL-Company</h1>
-            <a href="#index">Home</a>
-            <a href="#service">Service</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li><hr>
+                    <li><a href="#service">Service</a></li><hr>
+                    <li><a href="#about">About</a></li><hr>
+                    <li><a href="#contact">Contact</a></li><hr>
+                </ul>
+            </nav>
         </div>
         <div class="page">
             <h1>Your Trusted Local Business</h1><br><br><br>
@@ -47,5 +52,11 @@
             <p>&copy; 2025 Local Business. All Rights Reserved.</p>
         </footer>
     </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

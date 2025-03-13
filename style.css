@@ -73,6 +73,7 @@ html, body {
     font-family: monospace;
     font-weight: bold;
     font-size: 1.3rem;
+    margin: 0 10px; 
 }
 .main .header a:hover{
     color: rgba(128, 128, 128, 0.505);
@@ -84,7 +85,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 20px;
 }
 .main .page h1 {
@@ -123,20 +124,61 @@ html, body {
     border: none;
     cursor: pointer;
 }
+nav {
+    display: flex;
+    align-items: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+.nav-links a:hover {
+    color: hsl(194, 74%, 50%);
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
-    .main .header {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
         flex-direction: column;
-        height: auto;
-        padding: 20px;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background-color:black;
+        position: absolute;
+        top: 60px;
+        left: 0;
     }
 
-    .main .header h1 {
-        font-size: 1.5rem;
+    .nav-links.active {
+        display: flex;
     }
 
-    .main .header a {
+    .nav-links li {
         margin: 10px 0;
-        font-size: 1.1rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
     }
 
     .main .page {
@@ -151,14 +193,12 @@ html, body {
         font-size: 1.5rem;
     }
 }
-
 @media (max-width: 480px) {
-    .main .header h1 {
+    .header h1 {
         font-size: 1.2rem;
     }
 
-    .main .header a {
-        margin: 5px 0;
+    .nav-links a {
         font-size: 1rem;
     }
 
