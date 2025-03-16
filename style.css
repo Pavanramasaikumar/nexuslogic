@@ -141,6 +141,10 @@ html, body{
     gap: 20px;
     justify-content: center;
     padding: 20px;
+    margin-top: 40px;
+}
+.sinner div h2{
+    padding: 20px;
 }
 .ainner div{
     background-color: rgba(255, 255, 255, 0.1);
@@ -162,7 +166,10 @@ html, body{
     justify-content: center;
 }
 .ainner div img{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+.ainner div p{
+    margin-bottom: 40px;
 }
 .sinner div img{
     margin-bottom: 10px;
@@ -236,4 +243,4 @@ footer{
     .sinner, .ainner{
         grid-template-columns: 1fr;
     }
-}
+} 
